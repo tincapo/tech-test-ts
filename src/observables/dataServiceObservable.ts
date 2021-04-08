@@ -1,8 +1,9 @@
 import { of } from 'rxjs';
+import { Comment, Post, User } from '../types';
 
-export class DataService {
+export class DataServiceObservable {
     getUsers() {
-        return of([
+        return of(<User[]>[
             {
                 id: 1,
                 name: 'Leanne Graham',
@@ -237,7 +238,7 @@ export class DataService {
     }
 
     getPosts() {
-        return of([
+        return of(<Post[]>[
             {
                 userId: 1,
                 id: 1,
@@ -942,7 +943,7 @@ export class DataService {
     }
 
     getComments() {
-        return of([
+        return of(<Comment[]>[
             {
                 postId: 8,
                 id: 1,
